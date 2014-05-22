@@ -34,6 +34,11 @@
 {
     return [self initWithItemName:@"Item"];
 }
+
++ (instancetype)randomItem
+{
+}
+
 - (void)setItemName:(NSString*)str
 {
     _itemName = str;
