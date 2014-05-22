@@ -14,7 +14,6 @@ int main(int argc, const char* argv[])
 
     @autoreleasepool
     {
-
         // insert code here...
         NSMutableArray* items = [[NSMutableArray alloc] init];
 
@@ -32,8 +31,12 @@ int main(int argc, const char* argv[])
         BNRItem* item = [[BNRItem alloc] initWithItemName:@"Red Sofa"
                                            valueInDollars:100
                                              serialNmuber:@"A1B2C"];
+        BNRItem* itemWithName = [[BNRItem alloc] initWithItemName:@"NameNameName"];
+        BNRItem* itemNoName = [[BNRItem alloc] init];
 
         NSLog(@"%@", item);
+        NSLog(@"%@", itemWithName);
+        NSLog(@"%@", itemNoName);
 
         items = nil;
     }
