@@ -26,4 +26,11 @@
 
 - (NSDate*)dateCreated;
 
+//desiganted initializer
+- (instancetype)initWithItemName:(NSString*)name
+                  valueInDollars:(int)value
+                    serialNmuber:(NSString*)serial;
+
+- (instancetype)initWithItemName:(NSString*)name;
+
 @end
