@@ -17,27 +17,13 @@ int main(int argc, const char* argv[])
         // insert code here...
         NSMutableArray* items = [[NSMutableArray alloc] init];
 
-        [items addObject:@"One"];
-        [items addObject:@"Two"];
-        [items addObject:@"Three"];
-
-        [items insertObject:@"Zero"
-                    atIndex:0];
-
-        for (NSString* item in items) {
+        for (int i = 0; i < 10; i++) {
+            BNRItem* item = [BNRItem randomItem];
+            [items addObject:item];
+        }
+        for (BNRItem* item in items) {
             NSLog(@"%@", item);
         }
-
-        BNRItem* item = [[BNRItem alloc] initWithItemName:@"Red Sofa"
-                                           valueInDollars:100
-                                             serialNmuber:@"A1B2C"];
-        BNRItem* itemWithName = [[BNRItem alloc] initWithItemName:@"NameNameName"];
-        BNRItem* itemNoName = [[BNRItem alloc] init];
-
-        NSLog(@"%@", item);
-        NSLog(@"%@", itemWithName);
-        NSLog(@"%@", itemNoName);
-
         items = nil;
     }
     return 0;
