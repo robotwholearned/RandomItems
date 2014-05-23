@@ -34,7 +34,13 @@
 {
     return [self initWithItemName:@"Item"];
 }
-
+- (instancetype)initWithItemName:(NSString*)name
+                    serialNumber:(NSString*)serial
+{
+    return [self initWithItemName:name
+                   valueInDollars:0
+                     serialNmuber:serial];
+}
 + (instancetype)randomItem
 {
     NSArray* randomAdjectiveList = @[
